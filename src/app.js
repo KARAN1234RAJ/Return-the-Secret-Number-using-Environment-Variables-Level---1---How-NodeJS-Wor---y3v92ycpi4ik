@@ -20,11 +20,11 @@ dotenv.config();
 
 */
 
-const data = process.env.NUMBER;
+
 
 app.get("/api/get-env", (req, res) => {
   // Check if data is not undefined or null
-
+const data = process.env.NUMBER;
   if (data !== undefined && data !== null) {
     res.status(200).json({
       status: "success",
